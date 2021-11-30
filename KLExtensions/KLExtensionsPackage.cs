@@ -16,6 +16,7 @@ namespace KLExtensions
             await this.JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
             await RemoveCommentCommand.InitializeAsync(this);
             await RemoveRegionsCommand.InitializeAsync(this);
+            await SelectionWrapperCommand.InitializeAsync(this);
         }
     }
 }

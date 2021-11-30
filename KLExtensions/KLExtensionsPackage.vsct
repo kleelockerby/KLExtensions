@@ -4,6 +4,19 @@
   <Extern href="vsshlids.h" />
 
   <Commands package="guidPackage">
+    
+    <Groups>
+      <Group guid="guidPackageCmdSet" id="KLExtensionsMenuGroup" priority="0x0600">
+        <Parent guid="guidPackageCmdSet" id="KLExtensionsMenu" />
+      </Group>
+      
+      <Group guid="guidPackageSurroundWithCmdSet" id="SurroundWithMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN" />
+      </Group>
+      
+    </Groups>
+
+
     <Menus>
       <Menu guid="guidPackageCmdSet" id="KLExtensionsMenu" priority="0x700" type="Menu">
         <Parent guid="guidSHLMainMenu" id="IDG_VS_MM_TOOLSADDINS" />
@@ -12,12 +25,6 @@
         </Strings>
       </Menu>
     </Menus>
-    
-    <Groups>
-      <Group guid="guidPackageCmdSet" id="KLExtensionsMenuGroup" priority="0x0600">
-        <Parent guid="guidPackageCmdSet" id="KLExtensionsMenu" />
-      </Group>
-    </Groups>
 
     <Buttons>
       <Button guid="guidPackageCmdSet" id="RemoveCommentCommandId" priority="0x0000" type="Button">
@@ -35,11 +42,21 @@
           <CommandName>RemoveRegionsCommandId</CommandName>
           <ButtonText>Remove Regions</ButtonText>
         </Strings>
-      </Button>    
+      </Button> 
+      
+      <Button guid="guidPackageSurroundWithCmdSet" id="SurroundWithCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidPackageSurroundWithCmdSet" id="SurroundWithMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic4" />
+        <Strings>
+          <CommandName>SurroundWithCommandId</CommandName>
+          <ButtonText>Surround With ""</ButtonText>
+        </Strings>
+      </Button>
+      
     </Buttons>
 
     <Bitmaps>
-      <Bitmap guid="guidImages" href="Resources\RemoveCommentCommand.png" usedList="bmpPic1, bmpPic2, bmpPic3, bmpPic4, bmpPic5, bmpPic6" />
+      <Bitmap guid="guidImages" href="Resources\KLExtensionCommand.png" usedList="bmpPic1, bmpPic2, bmpPic3, bmpPic4, bmpPic5, bmpPic6" />
     </Bitmaps>
   </Commands>
 
@@ -55,7 +72,12 @@
       <IDSymbol name="KLExtensionsMenuGroup" value="0x1020" />
       <IDSymbol name="KLExtensionsMenu" value="0x1021" />
       <IDSymbol name="RemoveCommentCommandId" value="0x0100" />
-      <IDSymbol name="RemoveRegionsCommandId" value="0x0200"  />
+      <IDSymbol name="RemoveRegionsCommandId" value="0x0200" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidPackageSurroundWithCmdSet" value="{060f8145-dd46-4faa-ab59-dfdbeea72dcc}">
+      <IDSymbol name="SurroundWithMenuGroup" value="4128" />
+      <IDSymbol name="SurroundWithCommandId" value="256" />
     </GuidSymbol>
 
     <GuidSymbol name="guidImages" value="{d8bf0f90-62ba-4911-b5a7-3cac6baa0d50}">
@@ -66,5 +88,6 @@
       <IDSymbol name="bmpPic5" value="5" />
       <IDSymbol name="bmpPic6" value="6" />
     </GuidSymbol>
+
   </Symbols>
 </CommandTable>

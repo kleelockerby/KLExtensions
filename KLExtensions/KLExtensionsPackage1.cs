@@ -18,6 +18,9 @@ namespace KLExtensions
         public const string guidPackageCmdSetString = "e2927997-aef0-4d0f-9392-a44d51a7b2c2";
         public static Guid guidPackageCmdSet = new Guid(guidPackageCmdSetString);
 
+        public const string guidPackageSurroundWithCmdSetString = "060f8145-dd46-4faa-ab59-dfdbeea72dcc";
+        public static Guid guidPackageSurroundWithCmdSet = new Guid(guidPackageSurroundWithCmdSetString);
+
         public const string guidImagesString = "d8bf0f90-62ba-4911-b5a7-3cac6baa0d50";
         public static Guid guidImages = new Guid(guidImagesString);
     }
@@ -30,6 +33,8 @@ namespace KLExtensions
         public const int KLExtensionsMenu = 0x1021;
         public const int RemoveCommentCommandId = 0x0100;
         public const int RemoveRegionsCommandId = 0x0200;
+        public const int SurroundWithMenuGroup = 0x1020;
+        public const int SurroundWithCommandId = 0x0100;
         public const int bmpPic1 = 0x0001;
         public const int bmpPic2 = 0x0002;
         public const int bmpPic3 = 0x0003;

@@ -56,6 +56,7 @@
     <Compile Include="KLExtensionsPackage.cs" />
     <Compile Include="Commands\RemoveCommentCommand.cs" />
     <Compile Include="Commands\RemoveRegionsCommand.cs" />
+    <Compile Include="Commands\SelectionWrapperCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="source.extension.vsixmanifest">

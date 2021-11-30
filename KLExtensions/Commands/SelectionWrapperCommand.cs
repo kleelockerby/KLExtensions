@@ -12,7 +12,7 @@ namespace KLExtensions
     internal sealed class SelectionWrapperCommand
     {
         public const int CommandId = 256;
-        public static readonly Guid CommandSet = new Guid("8b3b016c-67bb-4cc2-a00b-cf7eb69c5092");
+        public static readonly Guid CommandSet = new Guid("060f8145-dd46-4faa-ab59-dfdbeea72dcc");
         private readonly AsyncPackage package;
 
         private SelectionWrapperCommand(AsyncPackage package, OleMenuCommandService commandService)
