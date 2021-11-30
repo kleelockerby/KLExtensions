@@ -50,6 +50,7 @@
 
   <Symbols>
     <GuidSymbol name="guidPackage" value="{64f8ed13-2bdc-449c-aa3d-9a8a69a14e93}" />
+    
     <GuidSymbol name="guidPackageCmdSet" value="{e2927997-aef0-4d0f-9392-a44d51a7b2c2}">
       <IDSymbol name="KLExtensionsMenuGroup" value="0x1020" />
       <IDSymbol name="KLExtensionsMenu" value="0x1021" />
