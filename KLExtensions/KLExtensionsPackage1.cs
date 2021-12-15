@@ -34,7 +34,11 @@ namespace KLExtensions
         public const int RemoveCommentCommandId = 0x0100;
         public const int RemoveRegionsCommandId = 0x0200;
         public const int SurroundWithMenuGroup = 0x1020;
-        public const int SurroundWithCommandId = 0x0100;
+        public const int SurroundWithSubMenu = 0x0102;
+        public const int SurroundWithBraceCommandId = 0x00FE;
+        public const int SurroundWithParenthesisCommandId = 0x00FF;
+        public const int SurroundWithDoubleQuotesCommandId = 0x0100;
+        public const int SurroundWithItemsMenuGroup = 0x0104;
         public const int bmpPic1 = 0x0001;
         public const int bmpPic2 = 0x0002;
         public const int bmpPic3 = 0x0003;

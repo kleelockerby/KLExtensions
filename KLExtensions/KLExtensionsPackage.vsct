@@ -4,18 +4,6 @@
   <Extern href="vsshlids.h" />
 
   <Commands package="guidPackage">
-    
-    <Groups>
-      <Group guid="guidPackageCmdSet" id="KLExtensionsMenuGroup" priority="0x0600">
-        <Parent guid="guidPackageCmdSet" id="KLExtensionsMenu" />
-      </Group>
-      
-      <Group guid="guidPackageSurroundWithCmdSet" id="SurroundWithMenuGroup" priority="0x0600">
-        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN" />
-      </Group>
-      
-    </Groups>
-
 
     <Menus>
       <Menu guid="guidPackageCmdSet" id="KLExtensionsMenu" priority="0x700" type="Menu">
@@ -24,7 +12,29 @@
           <ButtonText>KL Extensions</ButtonText>
         </Strings>
       </Menu>
+
+      <Menu guid="guidPackageSurroundWithCmdSet" id="SurroundWithSubMenu" priority="0x0100" type="Menu">
+        <Parent guid="guidPackageSurroundWithCmdSet" id="SurroundWithMenuGroup" />
+        <Strings>
+          <ButtonText>Surround With</ButtonText>
+        </Strings>
+      </Menu>
     </Menus>
+
+    <Groups>
+      <Group guid="guidPackageCmdSet" id="KLExtensionsMenuGroup" priority="0x0600">
+        <Parent guid="guidPackageCmdSet" id="KLExtensionsMenu" />
+      </Group>
+      
+      <Group guid="guidPackageSurroundWithCmdSet" id="SurroundWithMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN" />
+      </Group>
+
+      <Group guid="guidPackageSurroundWithCmdSet" id="SurroundWithItemsMenuGroup" priority="0x0600">
+        <Parent guid="guidPackageSurroundWithCmdSet" id="SurroundWithSubMenu" />
+      </Group>
+      
+    </Groups>
 
     <Buttons>
       <Button guid="guidPackageCmdSet" id="RemoveCommentCommandId" priority="0x0000" type="Button">
@@ -44,12 +54,30 @@
         </Strings>
       </Button> 
       
-      <Button guid="guidPackageSurroundWithCmdSet" id="SurroundWithCommandId" priority="0x0100" type="Button">
-        <Parent guid="guidPackageSurroundWithCmdSet" id="SurroundWithMenuGroup" />
+      <Button guid="guidPackageSurroundWithCmdSet" id="SurroundWithBraceCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidPackageSurroundWithCmdSet" id="SurroundWithItemsMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic5" />
+        <Strings>
+          <CommandName>SurroundWithBraceCommandId</CommandName>
+          <ButtonText>Braces {}</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidPackageSurroundWithCmdSet" id="SurroundWithParenthesisCommandId" priority="0x0101" type="Button">
+        <Parent guid="guidPackageSurroundWithCmdSet" id="SurroundWithItemsMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic6" />
+        <Strings>
+          <CommandName>SurroundWithParenthesisCommandId</CommandName>
+          <ButtonText>Paranthesis ()</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidPackageSurroundWithCmdSet" id="SurroundWithDoubleQuotesCommandId" priority="0x0102" type="Button">
+        <Parent guid="guidPackageSurroundWithCmdSet" id="SurroundWithItemsMenuGroup" />
         <Icon guid="guidImages" id="bmpPic4" />
         <Strings>
-          <CommandName>SurroundWithCommandId</CommandName>
-          <ButtonText>Surround With ""</ButtonText>
+          <CommandName>SurroundWithDoubleQuotesCommandId</CommandName>
+          <ButtonText>Double Quotes ""</ButtonText>
         </Strings>
       </Button>
       
@@ -63,6 +91,9 @@
   <KeyBindings>
     <KeyBinding guid="guidPackageCmdSet" id="RemoveCommentCommandId" mod1="Control" key1="K" mod2="Control" key2="Q" editor="guidVSStd97" />
     <KeyBinding guid="guidPackageCmdSet" id="RemoveRegionsCommandId" mod1="Control" key1="K" mod2="Control" key2="R" editor="guidVSStd97" />
+    <KeyBinding guid="guidPackageSurroundWithCmdSet" id="SurroundWithBraceCommandId" mod1="Control Shift" key1="0xDB" editor="guidVSStd97" />
+    <KeyBinding guid="guidPackageSurroundWithCmdSet" id="SurroundWithParenthesisCommandId" mod1="Control Shift" key1="0x39" editor="guidVSStd97" />
+    <KeyBinding guid="guidPackageSurroundWithCmdSet" id="SurroundWithDoubleQuotesCommandId" mod1="Control Shift" key1="0xDE" editor="guidVSStd97" />
   </KeyBindings>
 
   <Symbols>
@@ -77,7 +108,11 @@
 
     <GuidSymbol name="guidPackageSurroundWithCmdSet" value="{060f8145-dd46-4faa-ab59-dfdbeea72dcc}">
       <IDSymbol name="SurroundWithMenuGroup" value="4128" />
-      <IDSymbol name="SurroundWithCommandId" value="256" />
+      <IDSymbol name="SurroundWithSubMenu" value="258"/>
+      <IDSymbol name="SurroundWithBraceCommandId" value="254" />
+      <IDSymbol name="SurroundWithParenthesisCommandId" value="255" />
+      <IDSymbol name="SurroundWithDoubleQuotesCommandId" value="256" />
+      <IDSymbol name="SurroundWithItemsMenuGroup" value="260"/>
     </GuidSymbol>
 
     <GuidSymbol name="guidImages" value="{d8bf0f90-62ba-4911-b5a7-3cac6baa0d50}">
